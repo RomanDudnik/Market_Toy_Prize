@@ -1,3 +1,47 @@
+# Draw of toys in a children's goods store
+## Implementation
+### Decide on the main classes and properties of the program.
+
+* Create a Toy class (constructor class) that contains the following properties:
+  * **id** toys (data type int)
+  * **name** text name of the toy (data type - String)
+  * **count** number of toys (data type - int)
+  * **frequency** toy drop frequency (weight in % of 100, data type - int)
+* Data about each toy will be stored in the file **toysFile.txt**
+* To work with files, we use the built-in Java-File class.
+  With it, it is possible to create, open, record
+  and read files.
+* Next, we create a ToyStore class that will work with
+  class Toy.
+  In this class, we describe and implement all the necessary methods.
+  For example - adding new toys (addToy), changing their frequency
+  loss ("weight") changeFrequency, drawing and issuing prize money
+  toys(play).
+* In the ToyStore class, we create a list of toys and a list of prize toys.
+  We use a random number generator to draw.
+  Save and load the list of toys to a file.
+* The **addToy** method accepts **id**, **name**, **count** as parameters.
+  In the method, a new object of the **Toy** class is created and written to a file.
+* The **changeFrequency** method accepts **id** as parameters
+  and a new **frequency**("weight") of the toys. Next, the method reads the file **toysFile**
+  and finds the desired toy by its **id**. After that, changes the "weight" of the toy
+  and writes the changes to the file again.
+* The **play** method generates a random number from 1 to 100 and compares it
+  with the value of the weight of each toy. If the next number is less than or equal to the weight of the toy,
+  then this toy becomes a prize.
+* Prize toys are stored in **ArrayList**.
+* The **getPrizeToy** method returns the first toy in the list and removes it.
+  This toy is written to the **prizeFile** file.
+
+***The program is written using OOP approach.
+In this basic implementation, function calls are implemented directly through method calls.
+in the **main** entry point field in the **Start** class.
+Therefore, this design will be easy to improve and expand.
+For example, adding new methods and creating user interfaces,
+for ease of use and expansion of functionality.
+All this can be discussed with the customer and added to the TK***
+
+
 # Розыгрыш игрушек в магазине детских товаров
 ## Реализация
 ### Определяемся с основными классами и свойствами программы.
